@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 export default {
     commands: {
         echo: {
@@ -12,6 +11,14 @@ export default {
             fn: () => {
                 window.open('https://www.linkedin.com/in/dingshankeong/', '_blank')
                 return "opening linkedin page..."
+            }
+        },
+        telegram: {
+            description: 'connect with me on telegram',
+            usage: 'telegram',
+            fn: () => {
+                window.open('https://telegram.me/shan_icp', '_blank')
+                return "opening github page..."
             }
         },
         github: {

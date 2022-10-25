@@ -16,8 +16,8 @@ export default function Term() {
         <Terminal
             ref={terminal}
             welcomeMessage={[
-                "Welcome to shankeong's server.",
-                "Type 'help' to see a list of commands.",
+                "welcome to shankeong's server.",
+                "type 'help' to see a list of commands.",
             ]}
             commands={{
                 clear: {
@@ -93,8 +93,8 @@ export default function Term() {
                     usage: 'help',
                     fn: () => {
                         return `
-                            ${Object.keys(owrs).map(cmd => `${cmd}${" ".repeat(12-cmd.length)} | ${owrs[cmd].description}${" ".repeat(39-owrs[cmd].description.length)}`).join('\n')}
-                            ${Object.keys(cmds).map(cmd => `${cmd}${" ".repeat(12-cmd.length)} | ${cmds[cmd].description}${" ".repeat(39-cmds[cmd].description.length)}`).join('\n')}
+                            ${Object.keys(owrs).map(cmd => `${cmd}${" ".repeat(8-cmd.length)} | ${owrs[cmd].description}`).join('\n')}
+                            ${Object.keys(cmds).map(cmd => `${cmd}${" ".repeat(8-cmd.length)} | ${cmds[cmd].description}`).join('\n')}
                         `
                     }
                 },
